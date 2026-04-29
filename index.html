@@ -1,11 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>나의 첫 깃허브 홈페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조영은 후보 홈페이지</title>
+    <!-- 웹 폰트 (Pretendard) 적용 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        /* 기본 여백 제거 및 폰트 설정 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard', sans-serif; color: #333; overflow-x: hidden; }
+
+        /* 상단 메뉴바 디자인 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #e60012; /* 빨간색 */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .logo .number {
+            background-color: #e60012;
+            color: white;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            margin: 0 5px;
+        }
+        .logo .name { color: #111; }
+        
+        nav ul { list-style: none; display: flex; gap: 40px; }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        nav ul li a:hover { color: #e60012; }
+
+        /* 메인 홈(Hero) 영역 디자인 */
+        .hero {
+            margin-top: 70px; /* 메뉴바 높이만큼 띄움 */
+            background: linear-gradient(120deg, #f2f7fb 0%, #e3f0fa 100%); /* 연한 파란색 배경 */
+            height: calc(100vh - 70px);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10%;
+        }
+        
+        .hero-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 100px;
+        }
+        
+        .badge-wrap { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+        .badge {
+            background-color: #e60012;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .subtitle {
+            color: #619bd1;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .hero-text h1 {
+            font-size: 70px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #1a232c;
+        }
+        .hero-text h1 span { color: #76add9; /* 파란색 글씨 */ }
+        
+        .info-box {
+            display: inline-block;
+            align-self: flex-start;
+            background-color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            color: #555;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
+        }
+
+        /* 오른쪽 사진 영역 디자인 */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end; /* 사진을 바닥에 붙임 */
+        }
+        .hero-image img {
+            max-height: 90%;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
-    <h1>안녕하세요!</h1>
-    <p>깃허브 페이지로 만든 웹사이트입니다.</p>
+
+    <!-- 상단 메뉴바 -->
+    <header>
+        <div class="logo">
+            진보당 <span class="number">5</span> <span class="name">조영은</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#about">후보소개</a></li>
+                <li><a href="#activity">지역활동</a></li>
+                <li><a href="#promise">공약안내</a></li>
+                <li><a href="#support">후원안내</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메인 홈 화면 -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <div class="badge-wrap">
+                <span class="badge">기호 5번</span>
+                <span class="subtitle">언제나 주민 곁에</span>
+            </div>
+            <h1>
+                구의원은<br>
+                <span>조영은</span>
+            </h1>
+            <div class="info-box">동래구의원 후보(온천2·3동)</div>
+        </div>
+        
+        <div class="hero-image">
+            <!-- 사진 파일 이름을 아래 src=" " 안에 똑같이 적어주어야 합니다 -->
+            <img src="profile.png" alt="후보자 사진">
+        </div>
+    </section>
+
 </body>
 </html>
