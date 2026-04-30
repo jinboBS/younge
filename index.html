@@ -137,9 +137,11 @@ html {
     <img src="./profile.png" alt="조영은 후보" class="max-h-full max-w-full object-contain object-bottom md:object-right-bottom z-10 drop-shadow-md md:drop-shadow-xl">
   </div>
 
-  <!-- 상단 텍스트 영역 -->
+    <!-- 상단 텍스트 영역 -->
   <div class="relative z-20 w-full max-w-6xl mx-auto px-4 sm:px-6 h-full flex flex-col justify-start md:justify-center pt-2 md:pt-0">
-    <div class="w-full md:w-[55%] flex flex-col items-center md:items-start text-center md:text-left">
+    
+    <!-- 모바일에서만 텍스트 전체를 위로 올리기 위해 -mt-10 md:mt-0 을 추가했습니다 -->
+    <div class="w-full md:w-[55%] flex flex-col items-center md:items-start text-center md:text-left -mt-10 md:mt-0">
       
       <!-- 1. 기호 5번 + 상단 슬로건 -->
       <div class="flex items-center justify-center md:justify-start gap-2 mb-4 md:mb-6">
