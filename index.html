@@ -83,7 +83,7 @@ html {
 }
 </style>
 </head>
-<body class="bg-primary antialiased">
+<body class="bg-primary antialiased flex flex-col min-h-screen">
 <!-- 0. 상단 네비게이션바 -->
 <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur shadow-sm z-50 border-b-4 border-[#C1E2F5] transition-all">
 <div class="max-w-5xl mx-auto px-4 sm:px-6">
@@ -181,15 +181,13 @@ html {
   <div class="w-full py-16 md:py-24">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row gap-12 lg:gap-20">
       
-            <!-- 좌측: 인사말 -->
+      <!-- 좌측: 인사말 -->
       <div class="w-full md:w-1/2 flex flex-col">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-secondarydark mb-8 leading-tight drop-shadow-sm break-keep">
           언제나 주민 곁에
-          <!-- block으로 줄을 바꾸고, mt-4 md:mt-6 으로 위쪽 여백을 넉넉히 주었습니다 -->
           <span class="block text-[#78BBE6] mt-4 md:mt-6">조영은입니다</span>
         </h2>
 
-        
         <div class="space-y-6 text-base md:text-lg font-medium leading-relaxed text-graytext break-keep">
           <p>
             2019년, 마흔네 살의 나이에 늦깎이 엄마가 되었습니다.<br>
@@ -243,8 +241,6 @@ html {
     </h2>
   </div>
   
- 
-
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       
@@ -474,8 +470,9 @@ html {
           </div>
         </div>
       </div>
+    </div> <!-- 이 div가 복사 과정에서 빠져서 레이아웃이 깨졌었습니다. 복구 완료! -->
 
-       <!-- 하단 민원안내 배너 -->
+    <!-- 하단 민원안내 배너 -->
     <div class="bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between shadow-md relative overflow-hidden mt-16">
       <!-- 배경 장식 -->
       <div class="absolute -right-20 -top-20 w-64 h-64 bg-point opacity-5 rounded-full blur-3xl pointer-events-none"></div>
@@ -494,12 +491,12 @@ html {
         <p class="text-2xl md:text-3xl font-black text-[#006030] mb-3">영은이한테 전화하세요!</p>
         <p class="text-lg md:text-xl font-bold text-gray-800 bg-white px-5 py-3 rounded-xl shadow-md inline-block border border-gray-100">
           민원상담·정책제안·응원 <br class="md:hidden">
-          <!-- whitespace-nowrap을 추가하여 번호가 두 줄로 나뉘지 않게 고정 -->
           <span class="text-point font-black cursor-pointer hover:text-red-700 transition-colors whitespace-nowrap" onclick="copyPhoneNumber('010-7712-6586')" title="클릭하여 번호 복사">010-7712-6586</span>
         </p>
       </div>
     </div>
-
+  </div>
+</section>
 
 <!-- 5. 후원 안내 -->
 <section id="donate" class="bg-white py-20 border-b border-[#C1E2F5]">
@@ -563,8 +560,18 @@ html {
       <!-- 💡 전화번호 및 SNS 링크 추가 부분 -->
       <div class="text-gray-400 font-light text-sm md:text-base flex flex-wrap justify-center md:justify-start items-center gap-x-5 gap-y-2 mt-1">
         <span>민원·응원 전화: <strong class="text-white cursor-pointer hover:text-point transition-colors text-lg" onclick="copyPhoneNumber('010-7712-6586')" title="클릭하여 번호 복사">010<span>-</span>7712<span>-</span>6586</strong></span>
-        <span>페이스북 : <a href="https://www.facebook.com/profile.php?id
-
+        <span>페이스북 : <a href="https://www.facebook.com/profile.php?id=100001560020596" target="_blank" class="text-white font-bold hover:text-point transition-colors">조영은</a></span>
+        <span>인스타그램 : <a href="https://www.instagram.com/younge0917/" target="_blank" class="text-white font-bold hover:text-point transition-colors">younge0917</a></span>
+        <span>블로그 : <a href="https://blog.naver.com/younge76" target="_blank" class="text-white font-bold hover:text-point transition-colors">주민 곁에 조영은</a></span>
+      </div>
+    </div>
+    
+    <div class="text-xs text-gray-500 font-light mt-4 md:mt-0 text-center md:text-right">
+      &copy;2026 조영은 선거사무소. All rights reserved.<br>
+      <span class="inline-block mt-1">이메일 : younge0917@gmail.com</span>
+    </div>
+  </div>
+</footer>
 
 <!-- 7. 자바스크립트 스크립트 -->
 <script>
